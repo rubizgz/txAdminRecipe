@@ -1,72 +1,17 @@
 return {
-    ['testburger'] = {
-        label = 'Test Burger',
-        weight = 220,
-        degrade = 60,
-        client = {
-            image = 'burger_chicken.png',
-            status = { hunger = 200000 },
-            anim = 'eating',
-            prop = 'burger',
-            usetime = 2500,
-            export = 'ox_inventory_examples.testburger'
-        },
-        server = {
-            export = 'ox_inventory_examples.testburger',
-            test = 'what an amazingly delicious burger, amirite?'
-        },
-        buttons = {
-            {
-                label = 'Lick it',
-                action = function(slot)
-                    print('You licked the burger')
-                end
-            },
-            {
-                label = 'Squeeze it',
-                action = function(slot)
-                    print('You squeezed the burger :(')
-                end
-            },
-            {
-                label = 'What do you call a vegan burger?',
-                group = 'Hamburger Puns',
-                action = function(slot)
-                    print('A misteak.')
-                end
-            },
-            {
-                label = 'What do frogs like to eat with their hamburgers?',
-                group = 'Hamburger Puns',
-                action = function(slot)
-                    print('French flies.')
-                end
-            },
-            {
-                label = 'Why were the burger and fries running?',
-                group = 'Hamburger Puns',
-                action = function(slot)
-                    print('Because they\'re fast food.')
-                end
-            }
-        },
-        consume = 0.3
-    },
-
     ['bandage'] = {
-        label = 'Bandage',
+        label = 'Vendaje',
         weight = 115,
     },
 
     ['burger'] = {
-        label = 'Burger',
+        label = 'Hamburguesa',
         weight = 220,
         client = {
             status = { hunger = 200000 },
             anim = 'eating',
             prop = 'burger',
             usetime = 2500,
-            notification = 'You ate a delicious burger'
         },
     },
 
@@ -78,12 +23,11 @@ return {
             anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
             prop = { model = `prop_ld_can_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
             usetime = 2500,
-            notification = 'You quenched your thirst with a sprunk'
         }
     },
 
     ['parachute'] = {
-        label = 'Parachute',
+        label = 'Paracaídas',
         weight = 8000,
         stack = false,
         client = {
@@ -93,11 +37,11 @@ return {
     },
 
     ['garbage'] = {
-        label = 'Garbage',
+        label = 'Basura',
     },
 
     ['paperbag'] = {
-        label = 'Paper Bag',
+        label = 'Bolsa de papel',
         weight = 1,
         stack = false,
         close = false,
@@ -105,7 +49,7 @@ return {
     },
 
     ['panties'] = {
-        label = 'Knickers',
+        label = 'Bragas',
         weight = 10,
         consume = 0,
         client = {
@@ -117,12 +61,17 @@ return {
     },
 
     ['lockpick'] = {
-        label = 'Lockpick',
+        label = 'Ganzúa',
+        weight = 90,
+    },
+
+    ['advancedlockpick'] = {
+        label = 'Ganzúa avanzada',
         weight = 160,
     },
 
     ['phone'] = {
-        label = 'Phone',
+        label = 'Teléfono',
         weight = 190,
         stack = false,
         consume = 0,
@@ -142,19 +91,18 @@ return {
     },
 
     ['mustard'] = {
-        label = 'Mustard',
+        label = 'Mostaza',
         weight = 500,
         client = {
             status = { hunger = 25000, thirst = 25000 },
             anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
             prop = { model = `prop_food_mustard`, pos = vec3(0.01, 0.0, -0.07), rot = vec3(1.0, 1.0, -1.5) },
             usetime = 2500,
-            notification = 'You... drank mustard'
         }
     },
 
     ['water'] = {
-        label = 'Water',
+        label = 'Agua',
         weight = 500,
         client = {
             status = { thirst = 200000 },
@@ -162,12 +110,11 @@ return {
             prop = { model = `prop_ld_flow_bottle`, pos = vec3(0.03, 0.03, 0.02), rot = vec3(0.0, 0.0, -1.5) },
             usetime = 2500,
             cancel = true,
-            notification = 'You drank some refreshing water'
         }
     },
 
     ['armour'] = {
-        label = 'Bulletproof Vest',
+        label = 'Chaleco antibalas',
         weight = 3000,
         stack = false,
         client = {
@@ -177,32 +124,32 @@ return {
     },
 
     ['clothing'] = {
-        label = 'Clothing',
+        label = 'Ropa',
         consume = 0,
     },
 
     ['money'] = {
-        label = 'Money',
+        label = 'Dinero',
     },
 
     ['black_money'] = {
-        label = 'Dirty Money',
+        label = 'Dinero negro',
     },
 
     ['id_card'] = {
-        label = 'Identification Card',
+        label = 'Identificación',
     },
 
     ['driver_license'] = {
-        label = 'Drivers License',
+        label = 'Licencia de conducir',
     },
 
     ['weaponlicense'] = {
-        label = 'Weapon License',
+        label = 'Licencia de armas',
     },
 
     ['lawyerpass'] = {
-        label = 'Lawyer Pass',
+        label = 'Pase de abogado',
     },
 
     ['radio'] = {
@@ -216,7 +163,7 @@ return {
     },
 
     ['jammer'] = {
-        label = 'Radio Jammer',
+        label = 'Emisor de radio',
         weight = 10000,
         allowArmed = true,
         client = {
@@ -225,7 +172,7 @@ return {
     },
 
     ['radiocell'] = {
-        label = 'AAA Cells',
+        label = 'Pilas',
         weight = 1000,
         stack = true,
         allowArmed = true,
@@ -234,248 +181,183 @@ return {
         }
     },
 
-    ['advancedlockpick'] = {
-        label = 'Advanced Lockpick',
-        weight = 500,
-    },
-
     ['screwdriverset'] = {
-        label = 'Screwdriver Set',
+        label = 'Juego de destornilladores',
         weight = 500,
     },
 
     ['electronickit'] = {
-        label = 'Electronic Kit',
+        label = 'Equipo electrónico',
         weight = 500,
     },
 
     ['cleaningkit'] = {
-        label = 'Cleaning Kit',
+        label = 'Kit de limpieza',
         weight = 500,
     },
 
     ['repairkit'] = {
-        label = 'Repair Kit',
+        label = 'Kit de reparación',
         weight = 2500,
     },
 
     ['advancedrepairkit'] = {
-        label = 'Advanced Repair Kit',
+        label = 'Kit de reparación avanzado',
         weight = 4000,
     },
 
     ['diamond_ring'] = {
-        label = 'Diamond',
+        label = 'Diamante',
         weight = 1500,
     },
 
     ['rolex'] = {
-        label = 'Golden Watch',
+        label = 'Reloj',
         weight = 1500,
     },
 
     ['goldbar'] = {
-        label = 'Gold Bar',
+        label = 'Lingote de oro',
         weight = 1500,
     },
 
     ['goldchain'] = {
-        label = 'Golden Chain',
+        label = 'Cadena de oro',
         weight = 1500,
     },
 
     ['crack_baggy'] = {
-        label = 'Crack Baggy',
+        label = 'Bolsa de crack',
         weight = 100,
     },
 
     ['cokebaggy'] = {
-        label = 'Bag of Coke',
+        label = 'Bolsa de coca',
         weight = 100,
     },
 
     ['coke_brick'] = {
-        label = 'Coke Brick',
+        label = 'Ladrillo de coca',
         weight = 2000,
     },
 
     ['coke_small_brick'] = {
-        label = 'Coke Package',
+        label = 'Paquete de coca',
         weight = 1000,
     },
 
     ['xtcbaggy'] = {
-        label = 'Bag of Ecstasy',
+        label = 'Bolsa de éxtasis',
         weight = 100,
     },
 
     ['meth'] = {
-        label = 'Methamphetamine',
+        label = 'Metanfetamina',
         weight = 100,
     },
 
     ['oxy'] = {
-        label = 'Oxycodone',
+        label = 'Oxicodona',
         weight = 100,
     },
 
-    ['weed_ak47'] = {
-        label = 'AK47 2g',
-        weight = 200,
-    },
-
-    ['weed_ak47_seed'] = {
-        label = 'AK47 Seed',
-        weight = 1,
-    },
-
-    ['weed_skunk'] = {
-        label = 'Skunk 2g',
-        weight = 200,
-    },
-
-    ['weed_skunk_seed'] = {
-        label = 'Skunk Seed',
-        weight = 1,
-    },
-
-    ['weed_amnesia'] = {
-        label = 'Amnesia 2g',
-        weight = 200,
-    },
-
-    ['weed_amnesia_seed'] = {
-        label = 'Amnesia Seed',
-        weight = 1,
-    },
-
-    ['weed_og-kush'] = {
-        label = 'OGKush 2g',
-        weight = 200,
-    },
-
-    ['weed_og-kush_seed'] = {
-        label = 'OGKush Seed',
-        weight = 1,
-    },
-
-    ['weed_white-widow'] = {
-        label = 'OGKush 2g',
-        weight = 200,
-    },
-
-    ['weed_white-widow_seed'] = {
-        label = 'White Widow Seed',
-        weight = 1,
-    },
-
-    ['weed_purple-haze'] = {
-        label = 'Purple Haze 2g',
-        weight = 200,
-    },
-
-    ['weed_purple-haze_seed'] = {
-        label = 'Purple Haze Seed',
-        weight = 1,
-    },
-
     ['weed_brick'] = {
-        label = 'Weed Brick',
+        label = 'Ladrillo de marihuana',
         weight = 2000,
     },
 
     ['weed_nutrition'] = {
-        label = 'Plant Fertilizer',
+        label = 'Fertilizante para plantas',
         weight = 2000,
     },
 
     ['joint'] = {
-        label = 'Joint',
+        label = 'Porro',
         weight = 200,
     },
 
     ['rolling_paper'] = {
-        label = 'Rolling Paper',
+        label = 'Papel de liar',
         weight = 0,
     },
 
     ['empty_weed_bag'] = {
-        label = 'Empty Weed Bag',
+        label = 'Bolsa de marihuana vacía',
         weight = 0,
     },
 
     ['firstaid'] = {
-        label = 'First Aid',
+        label = 'Botiquín de primeros auxilios',
         weight = 2500,
     },
 
     ['ifaks'] = {
-        label = 'Individual First Aid Kit',
+        label = 'Botiquín de primeros auxilios individual',
         weight = 2500,
     },
 
     ['painkillers'] = {
-        label = 'Painkillers',
+        label = 'Analgésicos',
         weight = 400,
     },
 
     ['firework1'] = {
-        label = '2Brothers',
+        label = 'Fuegos artificiales 1',
         weight = 1000,
     },
 
     ['firework2'] = {
-        label = 'Poppelers',
+        label = 'Fuegos artificiales 2',
         weight = 1000,
     },
 
     ['firework3'] = {
-        label = 'WipeOut',
+        label = 'Fuegos artificiales 3',
         weight = 1000,
     },
 
     ['firework4'] = {
-        label = 'Weeping Willow',
+        label = 'Fuegos artificiales 4',
         weight = 1000,
     },
 
     ['steel'] = {
-        label = 'Steel',
+        label = 'Acero',
         weight = 100,
     },
 
     ['rubber'] = {
-        label = 'Rubber',
+        label = 'Goma',
         weight = 100,
     },
 
     ['metalscrap'] = {
-        label = 'Metal Scrap',
+        label = 'Chatarra',
         weight = 100,
     },
 
     ['iron'] = {
-        label = 'Iron',
+        label = 'Hierro',
         weight = 100,
     },
 
     ['copper'] = {
-        label = 'Copper',
+        label = 'Cobre',
         weight = 100,
     },
 
     ['aluminum'] = {
-        label = 'Aluminium',
+        label = 'Aluminio',
         weight = 100,
     },
 
     ['plastic'] = {
-        label = 'Plastic',
+        label = 'Plástico',
         weight = 100,
     },
 
     ['glass'] = {
-        label = 'Glass',
+        label = 'Cristal',
         weight = 100,
     },
 
@@ -485,57 +367,57 @@ return {
     },
 
     ['cryptostick'] = {
-        label = 'Crypto Stick',
+        label = 'Palo criptográfico',
         weight = 100,
     },
 
     ['trojan_usb'] = {
-        label = 'Trojan USB',
+        label = 'USB troyano',
         weight = 100,
     },
 
     ['toaster'] = {
-        label = 'Toaster',
+        label = 'Tostadora',
         weight = 5000,
     },
 
     ['small_tv'] = {
-        label = 'Small TV',
+        label = 'Televisor pequeño',
         weight = 100,
     },
 
     ['security_card_01'] = {
-        label = 'Security Card A',
+        label = 'Tarjeta de seguridad A',
         weight = 100,
     },
 
     ['security_card_02'] = {
-        label = 'Security Card B',
+        label = 'Tarjeta de seguridad B',
         weight = 100,
     },
 
     ['drill'] = {
-        label = 'Drill',
+        label = 'Taladro',
         weight = 5000,
     },
 
     ['thermite'] = {
-        label = 'Thermite',
+        label = 'Termita',
         weight = 1000,
     },
 
     ['diving_gear'] = {
-        label = 'Diving Gear',
+        label = 'Equipo de buceo',
         weight = 30000,
     },
 
     ['diving_fill'] = {
-        label = 'Diving Tube',
+        label = 'Tubo de buceo',
         weight = 3000,
     },
 
     ['antipatharia_coral'] = {
-        label = 'Antipatharia',
+        label = 'Antipataria',
         weight = 1000,
     },
 
@@ -545,32 +427,32 @@ return {
     },
 
     ['jerry_can'] = {
-        label = 'Jerrycan',
+        label = 'Bidón',
         weight = 3000,
     },
 
     ['nitrous'] = {
-        label = 'Nitrous',
+        label = 'Botella de nitro',
         weight = 1000,
     },
 
     ['wine'] = {
-        label = 'Wine',
+        label = 'Vino',
         weight = 500,
     },
 
     ['grape'] = {
-        label = 'Grape',
+        label = 'Uva',
         weight = 10,
     },
 
     ['grapejuice'] = {
-        label = 'Grape Juice',
+        label = 'Jugo de uva',
         weight = 200,
     },
 
     ['coffee'] = {
-        label = 'Coffee',
+        label = 'Café',
         weight = 200,
     },
 
@@ -585,52 +467,52 @@ return {
     },
 
     ['beer'] = {
-        label = 'Beer',
+        label = 'Cerveza',
         weight = 200,
     },
 
     ['sandwich'] = {
-        label = 'Sandwich',
+        label = 'Sándwich',
         weight = 200,
     },
 
     ['walking_stick'] = {
-        label = 'Walking Stick',
+        label = 'Bastón',
         weight = 1000,
     },
 
     ['lighter'] = {
-        label = 'Lighter',
+        label = 'Mechero',
         weight = 200,
     },
 
     ['binoculars'] = {
-        label = 'Binoculars',
+        label = 'Prismáticos',
         weight = 800,
     },
 
     ['stickynote'] = {
-        label = 'Sticky Note',
+        label = 'Nota adhesiva',
         weight = 0,
     },
 
     ['empty_evidence_bag'] = {
-        label = 'Empty Evidence Bag',
+        label = 'Bolsa de evidencia vacía',
         weight = 200,
     },
 
     ['filled_evidence_bag'] = {
-        label = 'Filled Evidence Bag',
+        label = 'Bolsa de evidencia llena',
         weight = 200,
     },
 
     ['harness'] = {
-        label = 'Harness',
+        label = 'Arnés',
         weight = 200,
     },
 
     ['handcuffs'] = {
-        label = 'Handcuffs',
+        label = 'Esposas',
         weight = 200,
     },
 }
